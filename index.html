@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header-site">
+        
+        <div id ="img-header">
+            <img src="branco2.png" alt="bola-fut">
+        </div>
+        <nav id="nav-header">
+            <div id="box-botao">
+                <button id="botao">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
+            <ul>
+                <li class="item-nav-header">
+                    <a href="#">Inicio</a>
+                </li>
+                <li class="item-nav-header">
+                    <a href="#">Sobre</a>
+                </li>
+                <li class="item-nav-header">
+                    <a href="#">Jogo</a>
+                </li>
+                <li class="item-nav-header">
+                    <a href="#">Brasil</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+</body>
+<script>
+   var btn = document.getElementById("botao");
+    var navHeader = document.querySelector("#nav-header ul");
+
+    btn.addEventListener('click',function(evento){
+        evento.preventDefault();
+
+        navHeader.classList.toggle('ativo');
+        btn.classList.toggle('ativo')
+    });
+
+</script>
+    
+
+</html>
