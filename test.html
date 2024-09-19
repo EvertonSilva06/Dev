@@ -1,118 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bola</title>
+    <link rel="shortcut icon" href="/img/pizza.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+ 
+    <title>Faustino</title>
 </head>
-
+ 
 <body>
     <header id="header-site">
-
         <div id="img-header">
-            <img src="branco2.png" alt="bola-fut">
+            <img src="/img/logoPizza.png">
         </div>
+ 
         <nav id="nav-header">
-            <div id="box-botao">
-                <button id="botao">
+            <div id="box-btn-menu">
+                <button id="btn-pizza">
                     <div></div>
                     <div></div>
                     <div></div>
                 </button>
             </div>
+ 
             <ul>
                 <li class="item-nav-header">
-                    <a href="#">Inicio</a>
-                </li>
+                    <a href="#">HOME</a>
                 <li class="item-nav-header">
-                    <a href="#">Sobre</a>
-                </li>
+                    <a href="#">QUEM SOMOS</a>
                 <li class="item-nav-header">
-                    <a href="#">Jogo</a>
-                </li>   
+                    <a href="#">CARDÁPIO</a>
                 <li class="item-nav-header">
-                    <a href="#">Brasil</a>
-                </li>
-
+                    <a href="#">CONTATO</a>
             </ul>
         </nav>
     </header>
-    <section id="sec-carrossel">
+ 
+    <section class="promocao">
        
         <div class="carousel">
-
+ 
             <div class="nav nav-left">
-                <button>&lt;</button>
+                <button><</button>
             </div>
-
+ 
             <div class="carousel-content">
-
+ 
                 <div class="slide">
-                    <div class="content-prod">  
-                        <div class="box-image-prod">
-                            <img src="vini.jpg" alt="vinijr">
-                        </div>
-                        <div class="info-prod">
-                            <h2></h2>
-                            
-                        </div>
-                        
+                    <div id="text-pizza">
+                        <h2>BATEU AQUELA FOME?</h2>
+           
+                        <h1>
+                            VENHA COMER <br> MELHOR PIZZA <br> DA REGIÃO!
+                        </h1>
+                    </div>
+           
+                    <div class="pizza-body">
+                        <img src="./img/pizza.png" alt="pizza">
                     </div>
                 </div>
-                <div class="slide">
-                    <div class="content-prod">  
-                        <div class="box-image-prod">
-                            <img src="corinthians-x-fortaleza.jpg" alt="timao">
-                        </div>
-                        <div class="info-prod">
-                            <h2></h2>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="content-prod">  
-                        <div class="box-image-prod">
-                            <img src="messi.jpg" alt="messi">
-                        </div>
-                        <div class="info-prod">
-                            <h2></h2>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="content-prod">  
-                        <div class="box-image-prod">
-                            <img src="vi" alt="vinijr">
-                        </div>
-                        <div class="info-prod">
-                            <h2></h2>
-                            
-                        </div>
-                        
-                    </div>
-                </div>
+               
             </div>
-
+ 
             <div class="nav nav-right">
-                <button>&gt;</button> 
+                <button>></button>
             </div>
-
         </div>
-
+ 
     </section>
-</body>
-<script>
-    document.addEventListener('DOMContentLoaded', function(){
-     
-   
-       /* carrosel */
+ 
+    <section id="sec-carousel">
+ 
        
+    </section>
+ 
+</body>
+ 
+<script>
+ 
+    document.addEventListener('DOMContentLoaded', function () {
+ 
+ 
+        var btnpizza = document.getElementById("btn-pizza");
+        var navHeader = document.querySelector("#nav-header ul");
+ 
+        btnpizza.addEventListener('click', function (evento) {
+            evento.preventDefault();
+ 
+            navHeader.classList.toggle('ativo');
+            btnpizza.classList.toggle('ativo');
+        });
+ 
         var carousel = document.querySelector('.carousel');
         var carouselContent = document.querySelector('.carousel-content');
         var slides = document.querySelectorAll('.slide');
@@ -164,23 +145,7 @@
  
         // Atualiza o layout conforme o tamanho da tela
         window.addEventListener('resize', setScreenSize);
-          // Define quantos slides serão exibidos de acordo com o tamanho da tela
-          function setScreenSize() {
-            if (window.innerWidth >= 992) {
-                carouselDisplaying = 1;
-            }
-            else if (window.innerWidth >= 500) {
-                carouselDisplaying = 3;
-            }
-            else if (window.innerWidth >= 300) {
-                carouselDisplaying = 2;
-            }
-            else {
-                carouselDisplaying = 1;
-            }
-            getScreenSize();
-        }
-
+ 
         // Ajusta o tamanho e posição de cada slide
         function getScreenSize() {
             var slides = document.querySelectorAll('.slide');
@@ -307,7 +272,7 @@
         }
  
     });
+ 
 </script>
-
-
-</html>     
+ 
+</html>
